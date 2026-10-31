@@ -1,0 +1,27 @@
+{
+  "name": "assignment_8_internetprogramming",
+  "version": "1.0.0",
+  "description": "\"# Assignment8_InternetProgramming - This is my assigment to figure out how to run a localized RESTful API engine with Express and node.js\"",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneOfTheMany1290324/Assignment8_InternetProgramming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OneOfTheMany1290324/Assignment8_InternetProgramming/issues"
+  },
+  "homepage": "https://github.com/OneOfTheMany1290324/Assignment8_InternetProgramming#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
