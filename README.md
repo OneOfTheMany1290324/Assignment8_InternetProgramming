@@ -19,11 +19,11 @@ Keep-Alive: timeout=5
 
 {"data":[{"id":"1793857073077","title":"Test Item"}]}
 
-RESULT:
+**RESULT:**
 
 Returned Status: 200 OK
-- Also returned the id, which was then used to create a new resource with POST in the next command.
-
+ 
+Also returned the id, which was then used to create a new resource with POST in the next command.
   
 ------------------------------------------------------
 **2.POST - Create a new resource:**
@@ -40,11 +40,12 @@ Keep-Alive: timeout=5
 
 {"data":{"id":"1793938067434","title":"Test Item"}}
 
-RESULT: 
+**RESULT:** 
 
 Returned Status: 201 created
 
 Created a new resource. The server automatically generated a new unique tracking ID and added the object to the in-memory collection.
+
 
 ------------------------------------------------------
 **3. GET - Resource by ID:**
@@ -61,7 +62,7 @@ Keep-Alive: timeout=5
 
 {"data":{"id":"1793938067434","title":"Test Item"}}
 
-RESULT: 
+**RESULT:**
 Returned Status: 200 OK 
 
 Successfully retrieved an individual resource using its unique ID.
@@ -81,7 +82,7 @@ Keep-Alive: timeout=5
 
 {"data":{"id":"1793938067434","title":"Updated Item"}}
 
-RESULT: 
+**RESULT:** 
 Returned Status: 200 OK
 Successfully updated the resource's title while preserving its original ID.
 
@@ -100,7 +101,7 @@ Keep-Alive: timeout=5
 
 ------------------------------------------------------------------------------------------------------------
 
-RESULT:
+**RESULT:**
 Returned Status: 200 OK 
 Successfully deleted the specified resource from the in memory collection using its unique ID.
 ------------------------------------------------------
