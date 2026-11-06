@@ -1,32 +1,23 @@
 
+import express from "express";
+import { logger } from "./Middleware/logger.js";
+import itemsRouter from "./Routes/items.js";
 
-// This creates the express server
-const express = require("express");
-const app = express()
-// const app sets up the actual server proper.
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
+app.use(logger); 
 
-// This allows the server to choose which port to run on.
-app.listen(3000);
+app.use("/api/resources", itemsRouter);
 
-// Setup route
-// routes: app.get,post,delete,put,patch
+// Global fallthrough route: Catches invalid paths.
+app.use((req, res) => {
+    res.status(404).json({ error: "Resource Route Path requested could not be resolved." });
 
-// request and response
-app.get('/', (req, res) => {
+});
 
-    console.log("Here")
-    res.sendStatus(500)
-    res.send("This is my server now!")
-
-})
-
-
-app.get('/', (req, res) => {
-
-    console.log("Here")
-    // res.send("server.js")
-    res.send ("This is my server now!")
-
-})
+app.listen(3000, () => {
+ 
+    console.log("Server is running on http://localhost:3000");
+    
+});
