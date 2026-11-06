@@ -1,6 +1,6 @@
-
+------------------------------------------------------------------------------------------------------------
 **This is the markdown text summary for Assignment 8.**
-
+------------------------------------------------------------------------------------------------------------
 I used curl commands inside of the VS Code integrate terminal to test the REST endpoints and to ensure that each endpoint retunred the appropriate HTTP status according to the HTTP method.
 
 API Endpoint Testing:
@@ -23,6 +23,8 @@ RESULT:
 
 Returned Status: 200 OK
 - Also returned the id, which was then used to create a new resource with POST in the next command.
+
+  
 ------------------------------------------------------
 **2.POST - Create a new resource:**
 
@@ -43,6 +45,7 @@ RESULT:
 Returned Status: 201 created
 
 Created a new resource. The server automatically generated a new unique tracking ID and added the object to the in-memory collection.
+
 ------------------------------------------------------
 **3. GET - Resource by ID:**
 
@@ -62,6 +65,7 @@ RESULT:
 Returned Status: 200 OK 
 
 Successfully retrieved an individual resource using its unique ID.
+
 ------------------------------------------------------
 **4. PUT - Update an Existing Resource**
 
@@ -93,6 +97,8 @@ ETag: W/"60-5JP+xEPZEmOMK2T2zTWiv0KoiGg"
 Date: Fri, 06 Nov 2026 04:14:38 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
+
+------------------------------------------------------------------------------------------------------------
 
 RESULT:
 Returned Status: 200 OK 
