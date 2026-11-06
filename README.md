@@ -4,7 +4,7 @@
 I used curl commands inside of the VS Code integrate terminal to test the REST endpoints and to ensure that each endpoint retunred the appropriate HTTP status according to the HTTP method.
 
 API Endpoint Testing:
-
+------------------------------------------------------
 **1. GET- All resources:**
 
 C:\Users\netek\Desktop\Assignment_8_InternetProgramming>curl.exe -i http://localhost:3000/api/resources
@@ -23,7 +23,7 @@ RESULT:
 
 Returned Status: 200 OK
 - Also returned the id, which was then used to create a new resource with POST in the next command.
-
+------------------------------------------------------
 **2.POST - Create a new resource:**
 
 C:\Users\netek\Desktop\Assignment_8_InternetProgramming>curl.exe -i -X POST http://localhost:3000/api/resources -H "Content-Type: application/json" -d "{\"title\":\"Test Item\"}"
@@ -43,7 +43,7 @@ RESULT:
 Returned Status: 201 created
 
 Created a new resource. The server automatically generated a new unique tracking ID and added the object to the in-memory collection.
-
+------------------------------------------------------
 **3. GET - Resource by ID:**
 
 C:\Users\netek\Desktop\Assignment_8_InternetProgramming>curl.exe -i http://localhost:3000/api/resources/1793938067434
@@ -62,7 +62,7 @@ RESULT:
 Returned Status: 200 OK 
 
 Successfully retrieved an individual resource using its unique ID.
-
+------------------------------------------------------
 **4. PUT - Update an Existing Resource**
 
 C:\Users\netek\Desktop\Assignment_8_InternetProgramming>curl.exe -i -X PUT http://localhost:3000/api/resources/1793938067434 -H "Content-Type: application/json" -d "{\"title\":\"Updated Item\"}"
@@ -81,7 +81,7 @@ RESULT:
 Returned Status: 200 OK
 Successfully updated the resource's title while preserving its original ID.
 
-
+------------------------------------------------------
 **5. DELETE - An existing resource:**
 
 C:\Users\netek\Desktop\Assignment_8_InternetProgramming>curl.exe -i -X DELETE http://localhost:3000/api/resources/1793938067434
@@ -97,3 +97,4 @@ Keep-Alive: timeout=5
 RESULT:
 Returned Status: 200 OK 
 Successfully deleted the specified resource from the in memory collection using its unique ID.
+------------------------------------------------------
